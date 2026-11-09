@@ -1,0 +1,425 @@
+{
+  "D1 place": {
+    "template": "sites",
+    "policy": {
+      "floor": 0.35,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.45,
+      "margin": 0.35,
+      "high": 1.01
+    },
+    "gate": 0.35,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.857,
+        "accuracy@2": 1.0
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.81
+      },
+      "accuracy": 0.857
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.857,
+        "accuracy@2": 0.952
+      },
+      "risky": {
+        "precision": 0.929,
+        "coverage": 0.667
+      },
+      "accuracy": 0.857
+    },
+    "tuning_accuracy": 0.857,
+    "held_out_accuracy": 0.857,
+    "median_ms": 24.3,
+    "cases": {
+      "tuning": 21,
+      "held_out": 21
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D2 page state": {
+    "template": "screen-kind",
+    "policy": {
+      "floor": 0.3,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.55,
+      "margin": 0.2,
+      "high": 0.95
+    },
+    "gate": 0.3,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.778,
+        "accuracy@2": 0.861
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.278
+      },
+      "accuracy": 0.778
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.829,
+        "accuracy@2": 0.943
+      },
+      "risky": {
+        "precision": 0.824,
+        "coverage": 0.486
+      },
+      "accuracy": 0.829
+    },
+    "tuning_accuracy": 0.829,
+    "held_out_accuracy": 0.778,
+    "median_ms": 64.1,
+    "cases": {
+      "tuning": 35,
+      "held_out": 36
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D3 target": {
+    "template": "controls",
+    "policy": {
+      "floor": 0.3,
+      "margin": 0.15,
+      "high": 1.01
+    },
+    "risky_policy": {
+      "floor": 0.95,
+      "margin": 0.4,
+      "high": 0.98
+    },
+    "gate": 0.3,
+    "held_out": {
+      "reversible": {
+        "coverage": 0.963,
+        "accuracy@1": 0.769,
+        "accuracy@2": 0.808
+      },
+      "risky": {
+        "precision": 0.833,
+        "coverage": 0.444
+      },
+      "accuracy": 0.741
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.846,
+        "accuracy@2": 0.885
+      },
+      "risky": {
+        "precision": 0.75,
+        "coverage": 0.615
+      },
+      "accuracy": 0.846
+    },
+    "tuning_accuracy": 0.846,
+    "held_out_accuracy": 0.741,
+    "median_ms": 39.3,
+    "cases": {
+      "tuning": 26,
+      "held_out": 27
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D4 pick check": {
+    "template": "contrast",
+    "policy": {
+      "floor": 0.45,
+      "margin": 0.15,
+      "high": 1.01
+    },
+    "risky_policy": {
+      "floor": 0.55,
+      "margin": 0.8,
+      "high": 0.98
+    },
+    "gate": 0.45,
+    "held_out": {
+      "reversible": {
+        "coverage": 0.84,
+        "accuracy@1": 0.81,
+        "accuracy@2": 0.81
+      },
+      "risky": {
+        "precision": 0.889,
+        "coverage": 0.36
+      },
+      "accuracy": 0.72
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 0.792,
+        "accuracy@1": 0.947,
+        "accuracy@2": 0.947
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.25
+      },
+      "accuracy": 0.833
+    },
+    "tuning_accuracy": 0.833,
+    "held_out_accuracy": 0.72,
+    "median_ms": 23.1,
+    "cases": {
+      "tuning": 24,
+      "held_out": 25
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D5 name match": {
+    "template": "wanted-only",
+    "policy": {
+      "floor": 0.3,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.5,
+      "margin": 0.6,
+      "high": 1.01
+    },
+    "gate": 0.3,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.857,
+        "accuracy@2": 0.952
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.667
+      },
+      "accuracy": 0.857
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 0.95,
+        "accuracy@1": 0.842,
+        "accuracy@2": 0.895
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.5
+      },
+      "accuracy": 0.85
+    },
+    "tuning_accuracy": 0.85,
+    "held_out_accuracy": 0.857,
+    "median_ms": 24.0,
+    "cases": {
+      "tuning": 20,
+      "held_out": 21
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D6 dialog answer": {
+    "template": "task-only",
+    "policy": {
+      "floor": 0.35,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.5,
+      "margin": 0.8,
+      "high": 1.01
+    },
+    "gate": 0.35,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.81,
+        "accuracy@2": 0.81
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.238
+      },
+      "accuracy": 0.81
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.7,
+        "accuracy@2": 0.8
+      },
+      "risky": {
+        "precision": 0.75,
+        "coverage": 0.4
+      },
+      "accuracy": 0.7
+    },
+    "tuning_accuracy": 0.7,
+    "held_out_accuracy": 0.81,
+    "median_ms": 22.3,
+    "cases": {
+      "tuning": 20,
+      "held_out": 21
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D7 outcome": {
+    "template": "evidence",
+    "policy": {
+      "floor": 0.6,
+      "margin": 0.05,
+      "high": 0.9
+    },
+    "risky_policy": {
+      "floor": 0.95,
+      "margin": 0.4,
+      "high": 0.98
+    },
+    "gate": 0.6,
+    "held_out": {
+      "reversible": {
+        "coverage": 0.792,
+        "accuracy@1": 0.684,
+        "accuracy@2": 0.684
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.0
+      },
+      "accuracy": 0.583
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 0.783,
+        "accuracy@1": 0.667,
+        "accuracy@2": 0.667
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.0
+      },
+      "accuracy": 0.609
+    },
+    "tuning_accuracy": 0.609,
+    "held_out_accuracy": 0.583,
+    "median_ms": 66.1,
+    "cases": {
+      "tuning": 23,
+      "held_out": 24
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D6 dialog role": {
+    "template": "needed-or-close",
+    "policy": {
+      "floor": 0.4,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.5,
+      "margin": 0.3,
+      "high": 1.01
+    },
+    "gate": 0.4,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.879,
+        "accuracy@2": 0.879
+      },
+      "risky": {
+        "precision": 0.952,
+        "coverage": 0.636
+      },
+      "accuracy": 0.879
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.692,
+        "accuracy@2": 0.692
+      },
+      "risky": {
+        "precision": 0.75,
+        "coverage": 0.615
+      },
+      "accuracy": 0.692
+    },
+    "tuning_accuracy": 0.692,
+    "held_out_accuracy": 0.879,
+    "median_ms": 43.4,
+    "cases": {
+      "tuning": 26,
+      "held_out": 33
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  },
+  "D9 collect": {
+    "template": "is-it",
+    "policy": {
+      "floor": 0.4,
+      "margin": 0.0,
+      "high": 0.95
+    },
+    "risky_policy": {
+      "floor": 0.45,
+      "margin": 0.8,
+      "high": 0.85
+    },
+    "gate": 0.4,
+    "held_out": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.786,
+        "accuracy@2": 0.786
+      },
+      "risky": {
+        "precision": 1.0,
+        "coverage": 0.357
+      },
+      "accuracy": 0.786
+    },
+    "tuning": {
+      "reversible": {
+        "coverage": 1.0,
+        "accuracy@1": 0.852,
+        "accuracy@2": 0.852
+      },
+      "risky": {
+        "precision": 0.9,
+        "coverage": 0.37
+      },
+      "accuracy": 0.852
+    },
+    "tuning_accuracy": 0.852,
+    "held_out_accuracy": 0.786,
+    "median_ms": 26.0,
+    "cases": {
+      "tuning": 27,
+      "held_out": 28
+    },
+    "chosen_by": "reversible: best held-out net after one elimination round; risky: most held-out coverage at 95% precision; template: reversible net, then risky coverage, then accuracy",
+    "model": "english"
+  }
+}

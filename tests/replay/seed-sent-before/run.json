@@ -1,0 +1,1634 @@
+{
+ "version": 2,
+ "prompt": "v1",
+ "task": "email xnobomu@example.com that the xpezima is ready",
+ "done": false,
+ "reason": "stopped: nothing more to try",
+ "ledger": [
+  "✓ open_place Mailbox | ready: Compose | site: mail.example  (mail.example in Brave Browser, profile Personal, open tab 1.1: 'Compose' on screen)",
+  "✓ click Compose | then: New message  (clicked 'Compose')",
+  "✓ fill To: xnobomu@example.com | Subject: Xpezima ready  (filled ['To', 'Subject'])",
+  "✓ write The xpezima is ready. | where: message body  ('Message body' holds 'The xpezima is ready.')",
+  "✗ submit Message sent  (done, but the screen does not show what was expected: 'Message sent' is not on screen)"
+ ],
+ "steps": [
+  {
+   "tool": "open_place",
+   "outcome": "ok",
+   "detail": "mail.example in Brave Browser, profile Personal, open tab 1.1: 'Compose' on xmideze…"
+  },
+  {
+   "tool": "click",
+   "outcome": "ok",
+   "detail": "clicked 'Compose'"
+  },
+  {
+   "tool": "fill",
+   "outcome": "ok",
+   "detail": "filled ['To', 'Subject']"
+  },
+  {
+   "tool": "write",
+   "outcome": "ok",
+   "detail": "'Message body' holds 'The xpezima is ready.'"
+  },
+  {
+   "tool": "submit",
+   "outcome": "done, but the screen does not show what was expected",
+   "detail": "'Message sent' is not on screen"
+  }
+ ],
+ "actions": [
+  {
+   "tool": "click",
+   "t": 0.001,
+   "fresh": true,
+   "target": {
+    "name": "Compose",
+    "kind": "button",
+    "region": "left",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 2,
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://mail.example/inbox",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://mail.example/inbox",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Compose",
+      "kind": "button",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Inbox",
+      "kind": "row",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message sent",
+      "kind": "text",
+      "region": "bottom-left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "set_text",
+   "t": 0.002,
+   "fresh": true,
+   "target": {
+    "name": "To",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 4,
+   "text": "xnobomu@example.com",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://mail.example/inbox",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://mail.example/inbox?compose=new",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Compose",
+      "kind": "button",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New message",
+      "kind": "heading",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "To",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Subject",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message body",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false,
+      "multiline": true
+     },
+     {
+      "name": "Send",
+      "kind": "button",
+      "region": "bottom-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message sent",
+      "kind": "text",
+      "region": "bottom-left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "set_text",
+   "t": 0.002,
+   "fresh": true,
+   "target": {
+    "name": "Subject",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 5,
+   "text": "Xpezima ready",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://mail.example/inbox",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://mail.example/inbox?compose=new",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Compose",
+      "kind": "button",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New message",
+      "kind": "heading",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "To",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "xnobomu@example.com",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Subject",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message body",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false,
+      "multiline": true
+     },
+     {
+      "name": "Send",
+      "kind": "button",
+      "region": "bottom-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message sent",
+      "kind": "text",
+      "region": "bottom-left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "set_text",
+   "t": 0.002,
+   "fresh": true,
+   "target": {
+    "name": "Message body",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false,
+    "multiline": true
+   },
+   "target_index": 6,
+   "text": "The xpezima is ready.",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://mail.example/inbox",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://mail.example/inbox?compose=new",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Compose",
+      "kind": "button",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New message",
+      "kind": "heading",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "To",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "xnobomu@example.com",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Subject",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "Xpezima ready",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message body",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false,
+      "multiline": true
+     },
+     {
+      "name": "Send",
+      "kind": "button",
+      "region": "bottom-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message sent",
+      "kind": "text",
+      "region": "bottom-left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "click",
+   "t": 0.002,
+   "fresh": true,
+   "target": {
+    "name": "Send",
+    "kind": "button",
+    "region": "bottom-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 7,
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://mail.example/inbox",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://mail.example/inbox?compose=new",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Compose",
+      "kind": "button",
+      "region": "left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New message",
+      "kind": "heading",
+      "region": "right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "To",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "xnobomu@example.com",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Subject",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "Xpezima ready",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message body",
+      "kind": "field",
+      "region": "right",
+      "row": [],
+      "value": "The xpezima is ready.",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false,
+      "multiline": true
+     },
+     {
+      "name": "Send",
+      "kind": "button",
+      "region": "bottom-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Message sent",
+      "kind": "text",
+      "region": "bottom-left",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  }
+ ],
+ "final_screen": {
+  "app": "Brave Browser",
+  "url": "https://mail.example/inbox",
+  "window": "",
+  "profile": "Personal",
+  "items": [
+   {
+    "name": "Address and search bar",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "https://mail.example/inbox?compose=new",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "Personal (profile)",
+    "kind": "button",
+    "region": "top-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "Compose",
+    "kind": "button",
+    "region": "left",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "New message",
+    "kind": "heading",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "To",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Subject",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Message body",
+    "kind": "field",
+    "region": "right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false,
+    "multiline": true
+   },
+   {
+    "name": "Send",
+    "kind": "button",
+    "region": "bottom-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Message sent",
+    "kind": "text",
+    "region": "bottom-left",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Couldn't send. Try again",
+    "kind": "text",
+    "region": "bottom-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   }
+  ]
+ },
+ "screens": [
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Inbox",
+     "kind": "row",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox?compose=new",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New message",
+     "kind": "heading",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "To",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Subject",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message body",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "multiline": true
+    },
+    {
+     "name": "Send",
+     "kind": "button",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox?compose=new",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New message",
+     "kind": "heading",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "To",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "xnobomu@example.com",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Subject",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message body",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "multiline": true
+    },
+    {
+     "name": "Send",
+     "kind": "button",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox?compose=new",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New message",
+     "kind": "heading",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "To",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "xnobomu@example.com",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Subject",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "Xpezima ready",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message body",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "multiline": true
+    },
+    {
+     "name": "Send",
+     "kind": "button",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox?compose=new",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New message",
+     "kind": "heading",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "To",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "xnobomu@example.com",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Subject",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "Xpezima ready",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message body",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "The xpezima is ready.",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "multiline": true
+    },
+    {
+     "name": "Send",
+     "kind": "button",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://mail.example/inbox",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://mail.example/inbox?compose=new",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Compose",
+     "kind": "button",
+     "region": "left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New message",
+     "kind": "heading",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "To",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Subject",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message body",
+     "kind": "field",
+     "region": "right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "multiline": true
+    },
+    {
+     "name": "Send",
+     "kind": "button",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Message sent",
+     "kind": "text",
+     "region": "bottom-left",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Couldn't send. Try again",
+     "kind": "text",
+     "region": "bottom-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "read": 0
+  },
+  {
+   "act": 0
+  },
+  {
+   "changed_since": true
+  },
+  {
+   "read": 1
+  },
+  {
+   "act": 1
+  },
+  {
+   "read": 2
+  },
+  {
+   "act": 2
+  },
+  {
+   "read": 3
+  },
+  {
+   "act": 3
+  },
+  {
+   "read": 4
+  },
+  {
+   "act": 4
+  },
+  {
+   "changed_since": true
+  },
+  {
+   "read": 5
+  },
+  {
+   "wait_change": true
+  },
+  {
+   "read": 5
+  }
+ ],
+ "brain": [
+  {
+   "kind": "plan",
+   "via": "lines",
+   "lines": [
+    "open_place Mailbox | ready: Compose | site: mail.example",
+    "click Compose | then: New message",
+    "fill To: xnobomu@example.com | Subject: Xpezima ready",
+    "write The xpezima is ready. | where: message body",
+    "submit | expect: Message sent",
+    "done: Message sent"
+   ]
+  },
+  {
+   "kind": "rescue",
+   "via": "lines",
+   "lines": [
+    "stop: nothing more to try"
+   ]
+  }
+ ],
+ "laya": [
+  {
+   "instructions": "Which control on screen would a person use to do `asked`?",
+   "options": [
+    "Send",
+    "not on this screen"
+   ],
+   "probs": [
+    0.982014,
+    0.017986
+   ]
+  },
+  {
+   "instructions": "Which does `asked` need?",
+   "options": [
+    "Send",
+    "some other control"
+   ],
+   "probs": [
+    0.982014,
+    0.017986
+   ]
+  },
+  {
+   "instructions": "Which item on the page shows `expected`?",
+   "options": [
+    "Couldn't send. Try again"
+   ],
+   "probs": [
+    1.0
+   ]
+  },
+  {
+   "instructions": "Does `item` show `expected`?",
+   "options": [
+    "it shows it",
+    "it shows something else"
+   ],
+   "probs": [
+    0.017986,
+    0.982014
+   ]
+  }
+ ],
+ "laya_temperatures": null,
+ "embeds": [],
+ "memory": [],
+ "confirms": [
+  {
+   "question": "send: click 'Send' (task: email xnobomu@example.com that the xpezima is ready)",
+   "answer": true
+  }
+ ],
+ "asks": [
+  {
+   "question": "I'm stuck on submit: done, but the screen does not show what was expected. What…",
+   "reply": ""
+  }
+ ],
+ "mac": {
+  "installed_apps": [
+   "Brave Browser",
+   "Safari",
+   "Finder",
+   "Notes"
+  ],
+  "browsers": {
+   "Brave Browser": [
+    "Personal"
+   ]
+  },
+  "folders": [
+   "~/Xvimubo/xlisugu"
+  ],
+  "now": "2026-10-08T09:30",
+  "default_browser": null,
+  "running": [],
+  "tabs": [
+   {
+    "browser": "Brave Browser",
+    "window_index": 1,
+    "tab_index": 1,
+    "url": "https://mail.example/inbox",
+    "title": "Inbox",
+    "profile": "Personal"
+   }
+  ],
+  "signed_in": []
+ },
+ "tabs_refreshed": null,
+ "waits": [
+  "changed_since",
+  "wait_change"
+ ],
+ "brain_calls": 2,
+ "answer": null,
+ "scrubbed": true
+}

@@ -1,0 +1,66 @@
+[project]
+name = "karta"
+version = "0.1.0"
+description = "Karta: say a task and it is done on your Mac. A local decision model (Laya) acts; an LLM plans; every step is checked."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [{ name = "Shubham" }]
+keywords = ["computer-use", "automation", "macos", "voice", "agents", "laya"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: MacOS X",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "pillow>=11.0,<13",
+    "ocrmac==1.0.1; sys_platform == 'darwin'",
+    "pyobjc-framework-ApplicationServices==12.2.2; sys_platform == 'darwin'",
+    "pyobjc-framework-Quartz==12.2.2; sys_platform == 'darwin'",
+    "pyobjc-framework-EventKit==12.2.2; sys_platform == 'darwin'",  # a day's calendar events, read-only (macos.calendar_events)
+    # Karta on a Mac: Laya (the local decision model) and push-to-talk voice
+    "laya-mlx==0.2.0; sys_platform == 'darwin'",
+    "sounddevice==0.5.6; sys_platform == 'darwin'",
+    "numpy>=2.0",
+    "httpx==0.28.1",
+]
+
+[project.optional-dependencies]
+# kept so older `uv sync --extra laya --extra voice` commands still work: both are now always installed
+laya = []
+voice = []
+# `karta-mcp`: Karta as the hands and eyes of a coding agent (Claude Code, Cursor, Codex) over MCP
+mcp = ["mcp>=1.20,<2"]
+
+[project.scripts]
+karta = "karta.app:main"
+karta-hud = "karta.hud:main"
+karta-mcp = "karta.mcp_server:main"
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "ruff==0.16.8"]
+
+[build-system]
+requires = ["hatchling==1.32.1"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["karta"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py312"
+extend-exclude = [".agents", ".claude", ".private", "demo"]  # local agent folders and local recordings
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

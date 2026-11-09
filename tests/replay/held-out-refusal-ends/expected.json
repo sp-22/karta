@@ -1,0 +1,6 @@
+{
+ "done": false,
+ "brain_calls": 1,
+ "reason_has": ["the user said no"],
+ "why": "the user's no to a browser prompt ends the task at once: no rescue and no second question (the live run asked three times and spent four brain calls)"
+}

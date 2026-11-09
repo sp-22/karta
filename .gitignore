@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.env
+dist/
+results/
+
+# local-only reference code (not part of karta)
+.reference/
+.superpowers/
+models/
+
+# local screen recordings and demo renders
+demo/

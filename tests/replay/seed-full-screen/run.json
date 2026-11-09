@@ -1,0 +1,561 @@
+{
+ "version": 2,
+ "prompt": "v1",
+ "task": "search the shop for xfilisa xdobiku",
+ "done": true,
+ "reason": "done: 'results for' on screen (new since the last step that changed something)",
+ "ledger": [
+  "✓ write xfilisa xdobiku | where: Search  ('Search' holds 'xfilisa xdobiku')",
+  "✓ submit results for  ('results for' on screen (new since the send))"
+ ],
+ "steps": [
+  {
+   "tool": "write",
+   "outcome": "ok",
+   "detail": "'Search' holds 'xfilisa xdobiku'"
+  },
+  {
+   "tool": "submit",
+   "outcome": "ok",
+   "detail": "'results for' on screen (new since the send)"
+  }
+ ],
+ "actions": [
+  {
+   "tool": "set_text",
+   "t": 0.0,
+   "fresh": true,
+   "target": {
+    "name": "Search",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 2,
+   "text": "xfilisa xdobiku",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://shop.example/",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Shop",
+      "kind": "tab",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://shop.example/",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Search",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xmaturo",
+      "kind": "link",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xdanaga",
+      "kind": "link",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "press",
+   "t": 0.001,
+   "fresh": true,
+   "text": "return",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://shop.example/",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Shop",
+      "kind": "tab",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://shop.example/",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Search",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "xfilisa xdobiku",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xmaturo",
+      "kind": "link",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xdanaga",
+      "kind": "link",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  }
+ ],
+ "final_screen": {
+  "app": "Brave Browser",
+  "url": "https://shop.example/search",
+  "window": "",
+  "profile": "Personal",
+  "items": [
+   {
+    "name": "12 results for xfilisa xdobiku",
+    "kind": "text",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false,
+    "source": "ocr"
+   },
+   {
+    "name": "Shop",
+    "kind": "tab",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "Address and search bar",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "https://shop.example/",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "Search",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Xfilisa xpagofe xtikeda",
+    "kind": "link",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Xgupimu xzekeka xtikeda",
+    "kind": "link",
+    "region": "middle",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   }
+  ]
+ },
+ "screens": [
+  {
+   "app": "Brave Browser",
+   "url": "https://shop.example/",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Shop",
+     "kind": "tab",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://shop.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Search",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xmaturo",
+     "kind": "link",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xdanaga",
+     "kind": "link",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://shop.example/",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Shop",
+     "kind": "tab",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://shop.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Search",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "xfilisa xdobiku",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xmaturo",
+     "kind": "link",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xdanaga",
+     "kind": "link",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://shop.example/search",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "12 results for xfilisa xdobiku",
+     "kind": "text",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "source": "ocr"
+    },
+    {
+     "name": "Shop",
+     "kind": "tab",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://shop.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Search",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xfilisa xpagofe xtikeda",
+     "kind": "link",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xgupimu xzekeka xtikeda",
+     "kind": "link",
+     "region": "middle",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "read": 0
+  },
+  {
+   "act": 0
+  },
+  {
+   "read": 1
+  },
+  {
+   "act": 1
+  },
+  {
+   "changed_since": true
+  },
+  {
+   "read": 2
+  }
+ ],
+ "brain": [
+  {
+   "kind": "plan",
+   "via": "lines",
+   "lines": [
+    "write xfilisa xdobiku | where: Search",
+    "submit | expect: results for",
+    "done: results for"
+   ]
+  }
+ ],
+ "laya": [],
+ "laya_temperatures": null,
+ "embeds": [],
+ "memory": [],
+ "confirms": [],
+ "asks": [],
+ "mac": {
+  "installed_apps": [
+   "Brave Browser",
+   "Safari",
+   "Finder",
+   "Notes"
+  ],
+  "browsers": {
+   "Brave Browser": [
+    "Personal"
+   ]
+  },
+  "folders": [
+   "~/Xvimubo/xlisugu"
+  ],
+  "now": "2026-10-08T09:30",
+  "default_browser": null,
+  "running": [],
+  "tabs": [
+   {
+    "browser": "Brave Browser",
+    "window_index": 1,
+    "tab_index": 1,
+    "url": "https://shop.example/",
+    "title": "Shop",
+    "profile": "Personal"
+   }
+  ],
+  "signed_in": []
+ },
+ "tabs_refreshed": null,
+ "waits": [
+  "changed_since",
+  "wait_change"
+ ],
+ "brain_calls": 1,
+ "answer": null,
+ "scrubbed": true
+}

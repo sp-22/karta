@@ -1,0 +1,20 @@
+{
+ "synthetic": true,
+ "note": "Test fixture only. Hand-written in the shape scripts/capture_screens.py writes; not a real capture.",
+ "app": "Brave Browser",
+ "url": "https://shop.example.com/search?q=snacks",
+ "window": "Search results - Brave - Personal",
+ "profile": "Personal",
+ "items": [
+  {"name": "Search or type a URL", "kind": "field", "value": "shop.example.com/search?q=snacks", "region": "top", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ax", "offscreen": false, "menu": false, "chrome": true},
+  {"name": "Search \"snacks\"", "kind": "field", "value": "snacks", "region": "top", "row": [], "focused": true, "enabled": true, "checked": null, "source": "ax", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "Salted Crisps 100g", "kind": "text", "value": "", "region": "left", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "₹50", "kind": "text", "value": "", "region": "left", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "ADD", "kind": "button", "value": "", "region": "left", "row": ["Salted Crisps 100g", "₹50"], "focused": false, "enabled": true, "checked": null, "source": "ax+ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "Corn Chips 90g", "kind": "text", "value": "", "region": "middle", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "₹40", "kind": "text", "value": "", "region": "middle", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "ADD", "kind": "button", "value": "", "region": "middle", "row": ["Corn Chips 90g", "₹40"], "focused": false, "enabled": true, "checked": null, "source": "ax+ocr", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "My Cart", "kind": "button", "value": "", "region": "top-right", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ax", "offscreen": false, "menu": false, "chrome": false},
+  {"name": "File > New Tab", "kind": "menu", "value": "", "region": "", "row": [], "focused": false, "enabled": true, "checked": null, "source": "ax", "offscreen": false, "menu": true, "chrome": false}
+ ]
+}

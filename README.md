@@ -1,0 +1,159 @@
+# Karta
+
+Karta does tasks on your Mac from a sentence you type or say, such as "create a note called groceries" or "message
+the design channel that the build is green". It reads the screen and decides each step with a small model that
+runs on this Mac. It calls a large model only to plan the task once.
+
+> **Early and under heavy development.** Karta drives your real mouse and keyboard. It does a dry run unless you
+> pass `--act`, so start there.
+
+## How it works
+
+Karta is not LLM computer use. **Code computes facts, Laya makes narrow choices, and the harness verifies and
+loops. The brain only splits the task into tool calls once and rescues a stuck step.**
+
+- **Laya** is a local decision model. It answers one narrow question at a time in tens of milliseconds, such as
+  which item is the Search button, whether this page is ready, or which result is the one wanted.
+- **The brain** is Claude Code's CLI with Sonnet. It writes the plan one tool per line (`open_place`, `find`,
+  `click`, `write`, `submit`, ...). Each step comes with a checkpoint: what the screen shows once the step worked.
+- **Code** reads the screen through the accessibility tree and Apple Vision OCR, and settles every fact it can.
+
+When a step fails, the harness tries these in order:
+
+1. Laya's next-best option.
+2. Undo a wrong click and try again.
+3. The next place.
+4. Ask the brain to fix that one step.
+
+A task is done only when its end state is on screen.
+
+How it all works: [docs/architecture.md](docs/architecture.md) and [docs/harness.md](docs/harness.md).
+
+## Install
+
+On an Apple silicon Mac:
+
+```
+curl -fsSL https://raw.githubusercontent.com/sp-22/karta/main/install.sh | sh
+                    # installs uv if missing, the `karta` command, then runs `karta setup`
+                    # (or from a clone: ./install.sh)
+karta start         # the HUD and push-to-talk: hold Right Option, say a task, let go
+```
+
+`karta setup` checks and fixes what Karta needs, one step at a time, and can be re-run any time:
+- **Permissions** for the app Karta runs in (your terminal): Accessibility, Screen Recording, Input Monitoring
+  (the talk key) and the Microphone. It opens the Settings pane for any that are missing.
+- **whisper.cpp** (installed with [Homebrew](https://brew.sh)) and its speech model (about 150 MB).
+- **Laya**, the local decision model (about 850 MB, from Hugging Face, cached after the first run).
+- **The brain:** the [Claude Code](https://docs.claude.com/en/docs/claude-code) CLI, signed in once with `claude`.
+- A first **map of this Mac**, which stays on this Mac.
+
+Models and memory live in `~/Library/Application Support/karta/`.
+
+## Running it from a clone
+
+For development, run it through uv:
+
+```
+uv run karta                                    # map the Mac, load Laya, then type tasks at the prompt
+uv run karta "create a note called groceries"   # one task, dry run: plans, never clicks
+uv run karta "..." --act                        # do it for real
+uv run karta "..." --act --hud                  # show each step in the HUD (start it first: uv run karta-hud &)
+uv run karta --voice --act --hud                # push-to-talk: hold Right Option, say the task, let go
+uv run karta "..." --record                     # also save each task's screens and actions as local JSON
+```
+
+At the prompt, a task that starts with `!` runs for real. `--budget` sets the seconds of harness time per task
+(default 120).
+
+- **On start**, Karta maps the Mac (installed apps, browser profiles, folders, open tabs, remembered places), loads
+  Laya and warms the brain. It re-reads tabs and running apps before every task.
+- **`karta-hud`** is a glass panel near the bottom of the screen. It shows the task, the plan and each step. While
+  you speak it shows a Listening pill with voice bars, and while Karta is in control it shows a blue edge glow.
+- **Voice** is push-to-talk (`--voice`): hold Right Option and speak. Speech is transcribed locally by whisper.cpp's
+  `whisper-server`. Karta asks its own questions the same way.
+
+To stop a live task, press Ctrl-C.
+
+## Use Karta from your coding agent (MCP)
+
+`karta-mcp` makes Karta the hands and eyes of a coding agent (Claude Code, Cursor, Codex) on this Mac. The agent is
+the brain: it reads the screen and decides each step; Karta carries the step out with its own tools (code first,
+Laya for narrow choices), checks it, and says what changed. It is a proof of concept.
+
+```
+claude mcp add karta -- uv run --project ~/Desktop/Projects/karta --extra mcp karta-mcp
+```
+
+Cursor (`~/.cursor/mcp.json`; use the absolute path to your clone):
+
+```json
+{
+  "mcpServers": {
+    "karta": {
+      "command": "uv",
+      "args": ["run", "--project", "/Users/you/Desktop/Projects/karta", "--extra", "mcp", "karta-mcp"]
+    }
+  }
+}
+```
+
+Tools: `screen()` (the front app, window, site host and up to 120 items as short lines), `click(target, near)`,
+`type_text(text, into)`, `press_submit(expect)`, `press(keys)`, `open(app_or_url)`, `scroll(direction)`, `back()`,
+and `check(expect)` (does the screen show it: yes or no, and why). Each action returns its outcome, what was done
+and what changed on screen.
+
+- **Hard-to-undo actions never run on the first call.** A send, payment, purchase, delete, post or quit answers
+  `needs confirmation` with the exact action; ask the user, then call it again with `confirm=true`.
+- **Dry run**: `KARTA_MCP_DRY=1` (e.g. `claude mcp add -e KARTA_MCP_DRY=1 karta -- ...`) answers what each action
+  would do and does nothing.
+- **Permissions**: the app that runs the agent (your terminal, Cursor) needs Accessibility and Screen Recording in
+  System Settings > Privacy & Security, the same as `karta` itself. Laya loads once when the server starts.
+- There is no whole-task tool: your agent plans; use `karta "<task>"` for Karta's own planner.
+
+## Where things live
+
+| Path | What |
+|---|---|
+| `karta/app.py` | The `karta` program: the Mac map, Laya, the brain, the task prompt, voice |
+| `karta/hud.py` | `karta-hud`, the on-screen panel |
+| `karta/mcp_server.py` | `karta-mcp`, Karta's tools for a coding agent over MCP |
+| `karta/harness/` | Harness v2: the loop, tools, Laya's questions, facts, memory, safety ([design](docs/harness.md)) |
+| `karta/brain/claude_code.py` | The brain: a warm, stripped `claude` process |
+| `karta/voice/` | The push-to-talk hotkey, audio, and local speech to text |
+| `karta/core/` | Shared pieces the harness uses: events, fast screen checks, the Laya matcher, safety words |
+| `karta/base/` | The Mac layer: platform adapter, input, AX walk, OCR and perception |
+| `scripts/` | Offline benches and tools (`decision_bench.py`, `next_step_bench.py`, `karta_memory.py`, ...) |
+| `tests/` | Offline tests. Nothing touches the Mac. |
+
+## Tests
+
+```
+HF_HUB_OFFLINE=1 uv run --quiet --no-sync pytest -q tests/
+uv run ruff check . && uv run ruff format --check .
+```
+
+The tests are pure logic. `tests/conftest.py` refuses every call that would reach the machine: input events,
+AppleScript, screen capture, `open`, and accessibility actions. `HF_HUB_OFFLINE=1` makes Laya load from the local
+cache.
+
+## Privacy and safety
+
+- **It asks before risky steps.** Anything hard to undo (send, post, pay, delete, or a dialog answer that confirms
+  one) waits for your yes. Permission prompts always take your answer. Karta never types a password.
+- **Dry run by default.** Nothing is clicked or typed without `--act`.
+- **Permissions.** Grant your terminal Screen Recording and Accessibility in System Settings > Privacy & Security.
+  Voice also needs the microphone. The Right Option hotkey needs Accessibility too. Without Screen Recording,
+  captures show only wallpaper. Without Accessibility, clicks are dropped.
+- **Data stays local.** Laya, OCR and speech to text run on this Mac. Memory is a local SQLite file and recordings
+  are local JSON files. Neither is part of the repo. The brain gets the task, a few task-relevant lines about the
+  Mac, and the current screen's items. It never gets the whole map.
+- Using the Mac during an `--act` run fights Karta for focus and the cursor.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Agents working on this repo should also read [AGENTS.md](AGENTS.md).
+
+## License
+
+[MIT](LICENSE).

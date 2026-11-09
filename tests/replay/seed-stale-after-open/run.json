@@ -1,0 +1,796 @@
+{
+ "version": 2,
+ "prompt": "v1",
+ "task": "add buy xrunoki to my list on tasks.example",
+ "done": true,
+ "reason": "done: 'Buy xrunoki' on screen (new since the last step that changed something)",
+ "ledger": [
+  "✓ open_place Tasks | ready: Add task | site: tasks.example  (tasks.example in Brave Browser, profile Personal: 'Add task' on screen)",
+  "✓ write Buy xrunoki | where: New task  ('New task' holds 'Buy xrunoki')",
+  "✓ submit Buy xrunoki  ('Buy xrunoki' on screen (new since the send))"
+ ],
+ "steps": [
+  {
+   "tool": "open_place",
+   "outcome": "ok",
+   "detail": "tasks.example in Brave Browser, profile Personal: 'Add task' on screen"
+  },
+  {
+   "tool": "write",
+   "outcome": "ok",
+   "detail": "'New task' holds 'Buy xrunoki'"
+  },
+  {
+   "tool": "submit",
+   "outcome": "ok",
+   "detail": "'Buy xrunoki' on screen (new since the send)"
+  }
+ ],
+ "actions": [
+  {
+   "tool": "open_url",
+   "t": 0.0,
+   "fresh": true,
+   "detail": "tasks.example in Brave Browser",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://news.example/today",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://news.example/today",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Ten xzekupa tasks.example users plan their week",
+      "kind": "heading",
+      "region": "",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Read more",
+      "kind": "link",
+      "region": "",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false,
+      "url": "https://news.example/today/plan-week"
+     }
+    ]
+   }
+  },
+  {
+   "tool": "set_text",
+   "t": 0.001,
+   "fresh": true,
+   "target": {
+    "name": "New task",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   "target_index": 3,
+   "text": "Buy xrunoki",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://tasks.example/",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://tasks.example/",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "My tasks",
+      "kind": "heading",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New task",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Add task",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xkidiso the xvilepa",
+      "kind": "row",
+      "region": "",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  },
+  {
+   "tool": "press",
+   "t": 0.001,
+   "fresh": true,
+   "text": "return",
+   "screen": {
+    "app": "Brave Browser",
+    "url": "https://tasks.example/",
+    "window": "",
+    "profile": "Personal",
+    "items": [
+     {
+      "name": "Address and search bar",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "https://tasks.example/",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "Personal (profile)",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": true,
+      "browser_ui": false
+     },
+     {
+      "name": "My tasks",
+      "kind": "heading",
+      "region": "top",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "New task",
+      "kind": "field",
+      "region": "top",
+      "row": [],
+      "value": "Buy xrunoki",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Add task",
+      "kind": "button",
+      "region": "top-right",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     },
+     {
+      "name": "Xkidiso the xvilepa",
+      "kind": "row",
+      "region": "",
+      "row": [],
+      "value": "",
+      "focused": false,
+      "enabled": true,
+      "dialog": false,
+      "chrome": false,
+      "browser_ui": false
+     }
+    ]
+   }
+  }
+ ],
+ "final_screen": {
+  "app": "Brave Browser",
+  "url": "https://tasks.example/",
+  "window": "",
+  "profile": "Personal",
+  "items": [
+   {
+    "name": "Address and search bar",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "https://tasks.example/",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "Personal (profile)",
+    "kind": "button",
+    "region": "top-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": true,
+    "browser_ui": false
+   },
+   {
+    "name": "My tasks",
+    "kind": "heading",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "New task",
+    "kind": "field",
+    "region": "top",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Add task",
+    "kind": "button",
+    "region": "top-right",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Xkidiso the xvilepa",
+    "kind": "row",
+    "region": "",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   },
+   {
+    "name": "Buy xrunoki",
+    "kind": "row",
+    "region": "",
+    "row": [],
+    "value": "",
+    "focused": false,
+    "enabled": true,
+    "dialog": false,
+    "chrome": false,
+    "browser_ui": false
+   }
+  ]
+ },
+ "screens": [
+  {
+   "app": "Brave Browser",
+   "url": "https://news.example/today",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://news.example/today",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Ten xzekupa tasks.example users plan their week",
+     "kind": "heading",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Read more",
+     "kind": "link",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false,
+     "url": "https://news.example/today/plan-week"
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://tasks.example/",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://tasks.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "My tasks",
+     "kind": "heading",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New task",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Add task",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xkidiso the xvilepa",
+     "kind": "row",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://tasks.example/",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://tasks.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "My tasks",
+     "kind": "heading",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New task",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "Buy xrunoki",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Add task",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xkidiso the xvilepa",
+     "kind": "row",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  },
+  {
+   "app": "Brave Browser",
+   "url": "https://tasks.example/",
+   "window": "",
+   "profile": "Personal",
+   "items": [
+    {
+     "name": "Address and search bar",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "https://tasks.example/",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "Personal (profile)",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": true,
+     "browser_ui": false
+    },
+    {
+     "name": "My tasks",
+     "kind": "heading",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "New task",
+     "kind": "field",
+     "region": "top",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Add task",
+     "kind": "button",
+     "region": "top-right",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Xkidiso the xvilepa",
+     "kind": "row",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    },
+    {
+     "name": "Buy xrunoki",
+     "kind": "row",
+     "region": "",
+     "row": [],
+     "value": "",
+     "focused": false,
+     "enabled": true,
+     "dialog": false,
+     "chrome": false,
+     "browser_ui": false
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "read": 0
+  },
+  {
+   "act": 0
+  },
+  {
+   "changed_since": false
+  },
+  {
+   "read": 0
+  },
+  {
+   "wait_change": true
+  },
+  {
+   "read": 1
+  },
+  {
+   "act": 1
+  },
+  {
+   "read": 2
+  },
+  {
+   "act": 2
+  },
+  {
+   "changed_since": true
+  },
+  {
+   "read": 3
+  }
+ ],
+ "brain": [
+  {
+   "kind": "plan",
+   "via": "lines",
+   "lines": [
+    "open_place Tasks | ready: Add task | site: tasks.example",
+    "write Buy xrunoki | where: New task",
+    "submit | expect: Buy xrunoki",
+    "done: Buy xrunoki"
+   ]
+  }
+ ],
+ "laya": [
+  {
+   "instructions": "Which control on screen would a person use to do `asked`?",
+   "options": [
+    "Add task",
+    "not on this screen"
+   ],
+   "probs": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "instructions": "Which does `asked` need?",
+   "options": [
+    "Add task",
+    "some other control"
+   ],
+   "probs": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "laya_temperatures": null,
+ "embeds": [],
+ "memory": [],
+ "confirms": [],
+ "asks": [],
+ "mac": {
+  "installed_apps": [
+   "Brave Browser",
+   "Safari",
+   "Finder",
+   "Notes"
+  ],
+  "browsers": {
+   "Brave Browser": [
+    "Personal"
+   ]
+  },
+  "folders": [
+   "~/Xvimubo/xlisugu"
+  ],
+  "now": "2026-10-08T09:30",
+  "default_browser": null,
+  "running": [],
+  "tabs": [
+   {
+    "browser": "Brave Browser",
+    "window_index": 1,
+    "tab_index": 1,
+    "url": "https://news.example/today",
+    "title": "News",
+    "profile": "Personal"
+   }
+  ],
+  "signed_in": []
+ },
+ "tabs_refreshed": null,
+ "waits": [
+  "changed_since",
+  "wait_change"
+ ],
+ "brain_calls": 1,
+ "answer": null,
+ "scrubbed": true
+}
