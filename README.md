@@ -1,11 +1,47 @@
 # Karta
 
-Karta does tasks on your Mac from a sentence you type or say, such as "create a note called groceries" or "message
-the design channel that the build is green". It reads the screen and decides each step with a small model that
-runs on this Mac. It calls a large model only to plan the task once.
+**I stopped clicking.** Hold a key, say what you want, and your Mac does it.
 
-> **Early and under heavy development.** Karta drives your real mouse and keyboard. It does a dry run unless you
-> pass `--act`, so start there.
+<p align="center"><img src="docs/media/karta-demo.gif" alt="Karta: I stopped clicking. I just say it, my Mac does it." width="900"></p>
+
+Karta works in your real apps and your signed-in browser, not a sandbox. It plans a task once, does each step itself,
+and checks the screen after every step before it moves on. A task is only "done" when the result is on screen.
+
+> **Early, and moving fast.** Karta drives your real mouse and keyboard. It handles everyday tasks well and still
+> misses some. Anything hard to undo (send, delete, pay, post) waits for your yes.
+
+## What you can say
+
+| You say | Karta |
+|---|---|
+| "Find three good cold brew videos on YouTube and tell me their titles" | Searches, reads the results, says the titles out loud |
+| "Email me saying Karta test: lunch? in Gmail" | Writes the email, reads it back, asks "Send it?" |
+| "Make a calendar event on Friday from 3 to 4 pm" | Creates it in Calendar and checks it is there |
+| "Find three articles about remote team rituals and email me the links" | Searches the web, then writes and sends the email |
+| "Take the top 3 Hacker News stories and put them in a reminder list called Reading" | Web to Reminders, one item per story |
+| "Find the cheapest flight Bangalore to Delhi next Friday, don't book" | Looks it up and tells you; never books |
+| "What's on this page, in two lines?" | Reads the page you are on and answers |
+| "Start Claude Code in my repo and add a hello line to the README" | Opens Claude Code in a new Terminal window and tells you when it finishes |
+| "Tell me when report.txt appears in Downloads" · "In 5 minutes, remind me to stretch" | Watches and reminders that speak up when it is time |
+
+- **It talks back.** Questions get a spoken answer.
+- **It keeps the thread.** "Summarize the second one." "Email that to me." Follow-ups refer to what it just did.
+- **It learns your tasks.** A task it has done and checked once is saved; next time it replays in seconds with no AI calls.
+- **It runs on your Mac.** The screen is read locally (accessibility tree and Apple Vision OCR), small choices are made
+  by a local model, and speech is transcribed locally. The planner is Claude, through your Claude Code sign-in.
+
+## Quick start
+
+You need an Apple silicon Mac and the [Claude Code](https://docs.claude.com/en/docs/claude-code) CLI, signed in once
+with `claude`.
+
+```
+curl -fsSL https://raw.githubusercontent.com/sp-22/karta/main/install.sh | sh
+karta start         # hold Right Option, say a task, let go
+```
+
+Setup asks for the permissions Karta needs and downloads its models (about 1 GB). Details are under
+[Install](#install).
 
 ## How it works
 
