@@ -1,0 +1,34 @@
+name: A task went wrong
+description: Karta did the wrong thing, got stuck, or said it was done when it wasn't.
+labels: [bug]
+body:
+  - type: input
+    id: task
+    attributes:
+      label: What you said
+      description: The task, as you typed or said it. Leave out anything private.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What Karta did, and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: App or site
+      description: For example Notes, Calendar, or the site's host (gmail.com). No page contents, please.
+  - type: input
+    id: mac
+    attributes:
+      label: Mac and macOS version
+      placeholder: MacBook Air M2, macOS 26.1
+  - type: textarea
+    id: log
+    attributes:
+      label: Karta's log lines
+      description: From ~/Library/Application Support/karta/logs/. Check them for names, emails or messages before pasting.
+      render: text

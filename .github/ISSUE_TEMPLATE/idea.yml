@@ -1,0 +1,15 @@
+name: Something you'd like Karta to do
+description: A task you'd say to your Mac, that Karta can't do yet.
+labels: [idea]
+body:
+  - type: input
+    id: say
+    attributes:
+      label: What you'd say
+      placeholder: "Find my last Uber receipt and add it to the Expenses note"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Where it gets stuck today, or why it matters to you
