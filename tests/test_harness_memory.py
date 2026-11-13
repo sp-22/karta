@@ -287,3 +287,18 @@ def test_the_cli_shows_and_unpins_pinned_tasks(tmp_path, capsys):
     cli("--path", str(path), "unpin", "r9")
     assert "No pinned task 'r9'" in capsys.readouterr().out
     assert RecipeBook(tmp_path / FILE).recipes == []
+
+
+def test_memory_opened_on_one_thread_is_used_by_another(tmp_path):
+    """Voice mode opens memory on the main thread and runs tasks on the screen worker."""
+    import threading
+
+    memory = HarnessMemory(tmp_path / "harness.sqlite", clock=Clock())
+    memory.place_result("WhatsApp chats", "web.whatsapp.com in Brave Browser, profile Personal", True)
+    seen = {}
+    worker = threading.Thread(
+        target=lambda: seen.update(place=memory.place_for("whatsapp chats"), named=memory.places_named("whatsapp"))
+    )
+    worker.start()
+    worker.join()
+    assert seen["place"] == "web.whatsapp.com in Brave Browser, profile Personal"

@@ -26,6 +26,7 @@ import queue
 import re
 import threading
 import time
+import traceback
 from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
@@ -261,6 +262,17 @@ _NUMBER = re.compile(r"(?:job|task|number) (?:number )?(?P<n>\d+|" + "|".join(NU
 _FILLER = {"the", "a", "an", "one", "job", "task", "my", "about", "that", "this", "for"}
 
 
+BROKE = "Something went wrong on my side, so I stopped. The details are in Karta's log."
+
+
+def _broke(error: BaseException) -> str:
+    """A job that raised: the traceback goes to the log, and the user hears one plain sentence, never Python's text."""
+    from karta import console
+
+    console.log("error", "".join(traceback.format_exception(error)).rstrip(), console.RED)
+    return BROKE
+
+
 def _words(text: str) -> list[str]:
     return re.findall(r"[a-z0-9']+", text.lower())
 
@@ -365,7 +377,7 @@ class Jobs:
         except Stopped:
             return self._finish(job, State.CANCELLED, "")
         except Exception as error:
-            return self._finish(job, State.FAILED, f"I couldn't finish: {error}")
+            return self._finish(job, State.FAILED, _broke(error))
         self._finish(job, State.CANCELLED if job.cancel.is_set() else State.DONE, "" if job.cancel.is_set() else said)
 
     def _screen_worker(self) -> None:
@@ -382,7 +394,7 @@ class Jobs:
             except Stopped:
                 ok, said = False, ""
             except Exception as error:  # the worker stays up for the next job
-                ok, said = False, f"I couldn't finish: {error}"
+                ok, said = False, _broke(error)
             if job.cancel.is_set():
                 self._finish(job, State.CANCELLED, "")
             else:

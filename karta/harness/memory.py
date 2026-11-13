@@ -239,12 +239,13 @@ class HarnessMemory:
         self.pins = None
         self.proving = ""  # the contract the run being remembered met (loop.remember sets it): each row keeps it
         if readonly:
-            self.db = sqlite3.connect(f"{Path(path).resolve().as_uri()}?mode=ro", uri=True)
+            self.db = sqlite3.connect(f"{Path(path).resolve().as_uri()}?mode=ro", uri=True, check_same_thread=False)
             self.how = "how" if self._has_how() else "''"
             return
         if str(path) != ":memory:":
             Path(path).parent.mkdir(parents=True, exist_ok=True)
-        self.db = sqlite3.connect(str(path))
+        # opened on the main thread, used by voice mode's screen worker: sqlite here is serialized (threadsafety 3)
+        self.db = sqlite3.connect(str(path), check_same_thread=False)
         self.db.executescript(SCHEMA)
         if not self._has_how():  # a file from before the column
             self.db.execute("alter table harness_facts add column how text not null default ''")

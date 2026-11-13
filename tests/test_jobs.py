@@ -373,3 +373,22 @@ def test_pills_and_the_jobs_event():
     until(lambda: not jobs.live())
     assert events[-1][1]["jobs"] == [] and events[-1][1]["text"] == "none"
     jobs.close()
+
+
+def test_a_job_that_raises_says_one_plain_line_and_logs_the_error(monkeypatch):
+    from karta import console
+    from karta.jobs import BROKE
+
+    logged = []
+    monkeypatch.setattr(console, "log", lambda tag, text, colour="": logged.append((tag, text)))
+
+    def boom(job):
+        raise RuntimeError("SQLite objects created in a thread can only be used in that same thread")
+
+    jobs, speaker, said, _ = make(boom)
+    job, _ = jobs.submit("open my notes app")
+    until(lambda: job.state == State.FAILED)
+    speaker.join()
+    assert said.lines == [BROKE]  # never Python's text, read aloud
+    assert logged and logged[0][0] == "error" and "same thread" in logged[0][1]  # the details are in the log
+    jobs.close()
